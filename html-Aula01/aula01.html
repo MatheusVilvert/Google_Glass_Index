@@ -1,0 +1,44 @@
+<html>
+	<head>
+
+		<title>Cadastro de Usuário</title>
+
+		<script type="text/javascript"> 
+			function exibirSenha() {
+				elSenha = document.getElementById("txtSenha");
+				nomeBotao = document.getElementById("nomeBotao");
+
+				if (elSenha.type == "text") {
+					nomeBotao.value = "Mostrar Senha";
+					elSenha.type = "password";
+				}else{
+					elSenha.type="text"
+					nomeBotao.value = "Ocultar senha";
+					
+				}
+
+			}
+			
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<form>
+
+			<label>Nome</label>
+			<input type="text" name="txtNome" id="txtNome">
+
+			<label>Senha</label>
+			<input type="password" name="txtSenha" id="txtSenha">
+
+			<button>Salvar</button>
+			<input id="nomeBotao" 
+				type ="button"  value="ver sennha" onclick= "exibirSenha()" >
+			</input>
+
+		</form>
+	</body>
+</html>

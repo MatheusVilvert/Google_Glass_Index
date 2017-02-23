@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora </title>
+
+    <style>
+        input{
+            margin-bottom: 10px;
+            margin-right: 20px;            
+        }
+        
+        label{
+            color: red;
+        }
+
+        h1{
+            font-size: 15pt;
+            color: red;
+        }
+
+        video{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            background-size: cover;
+        }
+
+
+    </style>
+
+    <script>
+        function soma() {
+            var v1 = document.getElementById("num1").value;
+            var v2 = document.getElementById("num2").value;
+            var res = parseFloat(v1) + parseFloat(v2);
+            document.getElementById("resultado").value = res;
+        }
+
+        function subtrai() {
+            var v1 = document.getElementById("num1").value;
+            var v2 = document.getElementById("num2").value;
+            var res = parseFloat(v1) - parseFloat(v2);
+            document.getElementById("resultado").value = res;
+        }
+
+        function multiplica() {
+            var v1 = document.getElementById("num1").value;
+            var v2 = document.getElementById("num2").value;
+            var res = parseFloat(v1) * parseFloat(v2);
+            document.getElementById("resultado").value = res;
+        }
+
+        function divisao() {
+            var v1 = document.getElementById("num1").value;
+            var v2 = document.getElementById("num2").value;
+            var res = parseFloat(v1) / parseFloat(v2);
+            document.getElementById("resultado").value = res;
+        }
+
+        function porcentagem() {
+            var v1 = document.getElementById("num1").value;
+            var v2 = document.getElementById("num2").value;
+            var res = parseFloat(v1) * (parseFloat(v2)/100);
+            document.getElementById("resultado").value = res;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Calculadora Simples Versão 1.0 feat Inhegas</h1>
+
+    <form>
+        <label>Numero 1</label>
+        <input type="text" name="num1" id="num1"><br>
+
+        <label>Numero 2</label>
+        <input type="text" name="num2" id="num2"><br>
+
+        <label>Resultado</label>
+        <input type="text" name="resultado" id="resultado"><br>
+
+        <input type="button" value="+" onclick="soma()">
+
+        <input type="button" value="-" onclick="subtrai()">
+
+        <input type="button" value="*" onclick="multiplica()">
+
+        <input type="button" value="/" onclick="divisao()">
+
+        <input type="button" value="%" onclick="porcentagem()">
+    </form>
+
+    <video autoplay id="video" muted loop>
+        <source src="video/inhegas.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
